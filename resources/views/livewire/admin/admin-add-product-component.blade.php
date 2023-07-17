@@ -22,47 +22,54 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Name</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Product Name" class="form-control input-md" wire:model="name" wire:keyup="generateSlug" required />
+                                    <input type="text" placeholder="Product Name" class="form-control input-md" wire:model="name" wire:keyup="generateSlug" />
+                                    @error('name') <p class="text-danger">{{ $message }}</p> @enderror 
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Slug</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Product Slug" class="form-control input-md" wire:model="slug" required/>
+                                    <input type="text" placeholder="Product Slug" class="form-control input-md" wire:model="slug" />
+                                    @error('slug') <p class="text-danger">{{ $message }}</p> @enderror 
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Short Description</label>
                                 <div class="col-md-4">
-                                    <textarea class="form-control" placeholder="Short Description"  wire:model="short_description" required></textarea>
+                                    <textarea class="form-control" placeholder="Short Description"  wire:model="short_description" ></textarea>
+                                    @error('short_description') <p class="text-danger">{{ $message }}</p> @enderror 
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Description</label>
                                 <div class="col-md-4">
-                                    <textarea class="form-control" placeholder="Description"wire:model="description" required></textarea>
+                                    <textarea class="form-control" placeholder="Description"wire:model="description" ></textarea>
+                                    @error('description') <p class="text-danger">{{ $message }}</p> @enderror 
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Regular Price</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Regular Price" class="form-control input-md" wire:model="regular_price" required/>
+                                    <input type="text" placeholder="Regular Price" class="form-control input-md" wire:model="regular_price" />
+                                    @error('regular_price') <p class="text-danger">{{ $message }}</p> @enderror 
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Sale Price</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Sale Price" class="form-control input-md" wire:model="sale_price" required />
+                                    <input type="text" placeholder="Sale Price" class="form-control input-md" wire:model="sale_price" />
+                                    @error('sale_price') <p class="text-danger">{{ $message }}</p> @enderror
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">SKU</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="SKU" class="form-control input-md" wire:model="SKU" required />
+                                    <input type="text" placeholder="SKU" class="form-control input-md" wire:model="SKU"  />
+                                    @error('SKU') <p class="text-danger">{{ $message }}</p> @enderror
                                 </div>
                             </div>
 
@@ -73,6 +80,7 @@
                                     <option value="instock">Instock</option>
                                     <option value="outofstock">Out of Stock</option>
                                    </select>
+                                   @error('stock_status') <p class="text-danger">{{ $message }}</p> @enderror
                                 </div>
                             </div>
 
@@ -89,29 +97,32 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Quantity</label>
                                 <div class="col-md-4">
-                                    <input type="text" placeholder="Quantity" class="form-control input-md" wire:model="quantity" required/>
+                                    <input type="text" placeholder="Quantity" class="form-control input-md" wire:model="quantity" />
+                                    @error('quantity') <p class="text-danger">{{ $message }}</p> @enderror
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Product Image</label>
                                 <div class="col-md-4">
-                                    <input type="file" class="input-file" wire:model="image" required />
+                                    <input type="file" class="input-file" wire:model="image" />
                                     @if($image)
                                         <img src="{{ $image->temporaryUrl() }}" width="120" />
                                     @endif
+                                    @error('image') <p class="text-danger">{{ $message }}</p> @enderror
                                 </div>
                             </div>
 
                             <div class="form-group">
                                 <label class="col-md-4 control-label">Category</label>
                                 <div class="col-md-4">
-                                   <select class="form-control" wire:model="category_id" required>
+                                   <select class="form-control" wire:model="category_id">
                                     <option value="">Select Category</option>
                                         @foreach ($categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endforeach
                                    </select>
+                                   @error('category_id') <p class="text-danger">{{ $message }}</p> @enderror
                                 </div>
                             </div>
 
