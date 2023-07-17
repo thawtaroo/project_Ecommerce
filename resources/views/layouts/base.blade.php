@@ -17,7 +17,8 @@
 	<link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/style.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/color-01.css')}}">
 	<link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/bootstrap-datetimepicker.min.css')}}">
-	<link rel="stylesheet" type="text/css" href="{{ asset ('assets/select2/css/select2.min.css')}}">	
+	<link rel="stylesheet" type="text/css" href="{{ asset ('assets/select2/css/select2.min.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{ asset ('assets/css/nouislider.min.css') }}">	
 	{{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
         
 
@@ -473,6 +474,7 @@
 	<script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
 	<script src="{{ asset('assets/js/functions.js')}}"></script>
 	<script src="{{ asset('assets/js/moment.min.js')}}"></script>
+	<script src="{{ asset('assets/js/nouislider.min.js')}}"></script>
 	<script src="{{ asset('assets/js/bootstrap-datetimepicker.min.js')}}"></script>
 	<script src="{{ asset('assets/select2/js/select2.min.js') }}"></script>	
 	{{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
