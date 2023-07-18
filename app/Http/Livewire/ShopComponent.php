@@ -37,12 +37,25 @@ class ShopComponent extends Component
         $this->emitTo('wishlist-count-component','refreshComponent');
     }
 
+    public function removeFromWishlist($product_id)
+    {
+        foreach(Cart::instance('wishlist')->content() as $witem)
+        {
+            if($witem->id == $product_id)
+            {
+                Cart::instance('wishlist')->remove($witem->rowId);
+                $this->emitTo('wishlist-count-component','refreshComponent');
+                return;
+            }
+        }
+    }
+
     use WithPagination;
     public function render()
     {
         if($this->sorting=='date')
         {
-             $products = Product::whereBetween('regular_price',[$this->min_price,$this->max_price])->orderBy('created_at','DESC')->paginate($this->pagesize);
+            $products = Product::whereBetween('regular_price',[$this->min_price,$this->max_price])->orderBy('created_at','DESC')->paginate($this->pagesize);
         }
         else if($this->sorting=='price')
         {
