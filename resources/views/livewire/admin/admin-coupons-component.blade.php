@@ -26,6 +26,7 @@
                                     <th>Coupon Type</th>
                                     <th>Coupon Value</th>
                                     <th>Cart Value</th>
+                                    <th>Expiry Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -36,11 +37,12 @@
                                     <td>{{ $coupon->code }}</td>
                                     <td>{{ $coupon->type }}</td>
                                     @if($coupon->type == 'fixed')
-                                    <td>MMK{{ $coupon->value }}</td>
+                                    <td>MMK {{ $coupon->value }}</td>
                                     @else
                                     <td>{{ $coupon->value }} %</td>
                                     @endif
-                                    <td>{{ $coupon->cart_value }}</td>
+                                    <td>MMK {{ $coupon->cart_value }}</td>
+                                    <td>{{ $coupon->expiry_date }}</td>
                                     <td>
                                         <a href="{{ route('admin.editcoupon',['coupon_id'=>$coupon->id]) }}"><i
                                                 class="fa fa-edit fa-2x"></i></a>
