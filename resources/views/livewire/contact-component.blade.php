@@ -45,7 +45,7 @@
 							<div class="contact-box contact-info">
 								<div class="wrap-map">
                                     <div>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d473.53863031261733!2d95.319786!3d18.28747!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30c741ed2508c7ef%3A0xa47e8608bdc9bd5d!2sMyat%20ThuTa%20Mobile%20%26%20Electronic!5e0!3m2!1sen!2sus!4v1689349657448!5m2!1sen!2sus" width="500" height="263" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                        <iframe src="{{ $setting->map }}" width="500" height="263" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                                     </iframe>
                                     </div>
 								</div>
@@ -56,7 +56,7 @@
 										<i class="fa fa-envelope" aria-hidden="true"></i>
 										<div class="right-info">
 											<b>Email</b>
-											<p>Support1@mtt.net</p>
+											<p>{{ $setting->email }}</p>
 										</div>
 									</div>
 
@@ -64,15 +64,15 @@
 										<i class="fa fa-phone" aria-hidden="true"></i>
 										<div class="right-info">
 											<b>Phone</b>
-											<p>09-465-789-111</p>
+											<p>{{ $setting->phone }}</p>
 										</div>
 									</div>
 
 									<div class="icon-box-item">
 										<i class="fa fa-map-marker" aria-hidden="true"></i>
 										<div class="right-info">
-											<b>Mail Office</b>
-											<p>Sed ut perspiciatis unde omnis<br />Street Name, Los Angeles</p>
+											<b>Address</b>
+											<p>{{ $setting->address }}</p>
 										</div>
 									</div>
 
