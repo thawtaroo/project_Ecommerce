@@ -1,4 +1,5 @@
 <div>
+	@section('title'){{ 'Contact Us' }}@endsection
     <main id="main" class="main-site left-sidebar">
 
 		<div class="container">

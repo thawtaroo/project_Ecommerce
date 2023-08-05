@@ -1,5 +1,5 @@
 <div><main id="main" class="main-site">
-
+    @section('title'){{ 'About' }}@endsection
     <div class="container">
 
         <div class="wrap-breadcrumb">

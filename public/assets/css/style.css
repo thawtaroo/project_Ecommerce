@@ -691,8 +691,8 @@ li.menu-item .nav-label.new-label{
 	background: #365db5;
 }
 li.menu-item .nav-label.new-label::before{
-	border-top-color: #365db5;
-	border-left-color: #365db5;
+	border-top-color: #f1f3f7;
+	border-left-color: #d7dbe4;
 }
 
 li.menu-item .nav-label.sale-label{
